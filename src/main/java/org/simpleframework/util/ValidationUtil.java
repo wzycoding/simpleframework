@@ -12,4 +12,11 @@ public class ValidationUtil {
     public static boolean isEmpty(Collection<?> obj) {
         return obj == null || obj.isEmpty();
     }
+    public static boolean isEmpty(Object[] objs) {
+        return objs == null || objs.length == 0;
+    }
+
+    public static boolean isEmpty(String str) {
+        return str == null || str.equals("");
+    }
 }

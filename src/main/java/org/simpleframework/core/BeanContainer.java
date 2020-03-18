@@ -102,7 +102,7 @@ public class BeanContainer {
      * 根据Class对象获取Bean实例
      * @param clazz bean实例
      */
-    Object getBean(Class<?> clazz) {
+    public Object getBean(Class<?> clazz) {
         return beanMap.get(clazz);
     }
 
