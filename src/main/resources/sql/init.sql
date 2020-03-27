@@ -8,9 +8,10 @@ create table `tb_head_line` (
    `create_time`datetime DEFAULT NULL comment '创建时间',
    `last_edit_time` datetime DEFAULT NULL comment '最近修改时间',
    PRIMARY KEY (`line_id`)
-)ENGINE=InnoDB AUTU_INCREMENT=1 DEFAULT CHARSET=utf-8 COMMENT '头条表';
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COMMENT '头条表';
 
-create table `shop_category` (
+
+create table `tb_shop_category` (
     `shop_category_id` bigint NOT NULL AUTO_INCREMENT COMMENT '店铺类别id',
     `shop_category_name` varchar(100) NOT NULL DEFAULT '' COMMENT '店铺类别名称',
     `shop_category_desc` varchar(1000) DEFAULT '' COMMENT '店铺类别描述',
@@ -23,4 +24,4 @@ create table `shop_category` (
     KEY `fk_shop_category_self` (`parent_id`),
     CONSTRAINT `fk_shop_category_self` FOREIGN KEY (`parent_id`)
     REFERENCES `tb_shop_category` (`shop_category_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET = utf-8 COMMENT COMMENT '店铺类别表';
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET =utf8mb4 COMMENT '店铺类别表';
